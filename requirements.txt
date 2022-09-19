@@ -1,0 +1,4 @@
+requirement
+pip install widget tweaks
+pip install six
+django-crispy-forms
