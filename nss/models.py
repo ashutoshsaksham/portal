@@ -9,9 +9,9 @@ from django.contrib.auth.models import AbstractUser
 
 
 DEPT_CHOICES = (
-    ("CSE", "CSE"),
-    ("ISE", "ISE"),
     ("ECE", "ECE"),
+    ("ISE", "ISE"),
+    ("CSE", "CSE"),
     ("EEE", "EEE"),
     ("CIVIL", "CIVIL"),
     ("AERO", "AERO"),
@@ -19,7 +19,8 @@ DEPT_CHOICES = (
 )
 GENDER_CHOICES= (
     ("MALE", "MALE"),
-    ("FEMALE", "FEMALE")
+    ("FEMALE", "FEMALE"),
+    ("OTHER", "OTHER")
 )
 
 
@@ -35,7 +36,7 @@ class User(AbstractUser):
    
 
 class Student(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, default=None, primary_key = True,unique=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, default=None,unique=True)
     phone_number = models.CharField(max_length=10)
     department = models.CharField(choices = DEPT_CHOICES,
     default = NULL, max_length=50)
@@ -48,7 +49,7 @@ class Student(models.Model):
 
 
 class Ngo(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, default=None, primary_key = True, unique=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, default=None, unique=True)
     phone_number = models.CharField(max_length=10)
     address = models.CharField(max_length=200)
    

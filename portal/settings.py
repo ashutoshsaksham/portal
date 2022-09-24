@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'nss',
     'widget_tweaks',
     'crispy_forms',
+    'event',
 ]
 
 AUTH_USER_MODEL = "nss.User"
@@ -128,7 +129,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#SPTP configuration
+#SMTP configuration
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.mailtrap.io'

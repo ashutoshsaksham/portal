@@ -2,3 +2,30 @@ requirement
 pip install widget tweaks
 pip install six
 django-crispy-forms
+
+
+
+
+git remote add origin https://github.com/ashutoshsaksham/NSS-Portal.git
+git branch -M main
+git push -u origin main
+
+
+https://github.com/ashutoshsaksham/NSS-Portal.git
+
+
+
+echo "# collegemate" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ashutoshsaksham/collegemate.git
+git push -u origin 
+
+
+
+
+git remote add origin https://github.com/ashutoshsaksham/collegemate.git
+git branch -M main
+git push -u origin main
